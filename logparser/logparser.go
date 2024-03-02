@@ -1,7 +1,7 @@
-//Simple poolling del archivo de log,
-//veo en cada segundo si se agregaron nuevas lineas
+//Simple polling del archivo de log,
+//En cada segundo verifico si se agregaron nuevas lineas
 //
-// Deberia usar algo orientado a eventos en el filesystem:
+// Deberia usar orientado a eventos en el filesystem:
 //@TODO: utilizar a futuro alguna libreria como fsnotify, go-tailer, etc
 //
 
