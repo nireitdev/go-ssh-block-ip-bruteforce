@@ -28,7 +28,7 @@ func main() {
 			log.Println("Ban SSH Ip: ", ip)
 
 		case ip := <-banSTMPD:
-			log.Println("Ban SSH Ip: ", ip)
+			log.Println("Ban STMPD Ip: ", ip)
 		}
 
 	}
