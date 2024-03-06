@@ -25,5 +25,6 @@ go run main.go
 
 ## TODO:
 - Unban IPs
+- Metrics?? Prometheus?
 - A lot of refactoring.
 - ..etc
