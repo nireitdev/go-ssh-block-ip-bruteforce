@@ -7,9 +7,15 @@ For personal learning
 
 WIP!!!
 
-## Usign
+## Using
 Rename config.yml.example and load parameters.
+
 You can use Redis.io to get access a free database.
+
+Then do:  
+```
+go run main.go
+```
 
 ## Feat:
 - Parse some log file for failed access attempts.
