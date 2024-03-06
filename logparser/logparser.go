@@ -30,6 +30,7 @@ func (lf *Logfile) Run() (listadoIPs chan string) {
 	return lf.lines
 }
 func (lf *Logfile) tail() {
+	firstrun := true
 
 	f, err := os.Open(lf.Filename)
 	if err != nil {
@@ -47,6 +48,10 @@ func (lf *Logfile) tail() {
 	for {
 		// Leo el contenido del archivo hasta el EOF:
 		for line, err := r.ReadString('\n'); err != io.EOF; line, err = r.ReadString('\n') {
+			//No parseo las entradas anteriores del archivo de log
+			if firstrun {
+				continue
+			}
 
 			matched, _ := regexp.MatchString(lf.Searchreg, line)
 			if matched {
@@ -56,6 +61,8 @@ func (lf *Logfile) tail() {
 			}
 
 		}
+
+		firstrun = false
 
 		pos, err := f.Seek(0, io.SeekCurrent)
 		if err != nil {

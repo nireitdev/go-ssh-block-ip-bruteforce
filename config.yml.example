@@ -1,0 +1,15 @@
+app:
+  maxintervalscan: 15
+  maxattempts: 3
+  runcmd: "/usr/sbin/ufw insert 1 deny from {} comment 'block spammer'"
+
+redis:
+  addr: "redis-xxxxxx.cloud.redislabs.com:11933"
+  user: "xxxx"
+  pass: "xxxxxxxx"
+  db: "0"
+
+logparser:
+  logfile:  "/var/log/auth.log"
+  searchregex: "Failed"
+  filterregex: "\\d+\\.\\d+.\\d+\\.\\d+"
