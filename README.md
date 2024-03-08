@@ -27,4 +27,5 @@ go run main.go
 - Unban IPs
 - Metrics?? Prometheus?
 - A lot of refactoring.
+- Better documentation :p
 - ..etc
